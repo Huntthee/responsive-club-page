@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template: 50px / repeat(8, 1fr);
+  justify-items: center;
+}
+
+.club-header {
+  grid-column: 1 / span 8;
+  grid-row: 1 / 4;
+}
+
+.navigation-links {
+  text-align: center;
+}
+
+main {
+  grid-column: 2 / 8;
+  grid-row: 4 / span 10;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  grid-column: 1 / span 8;
+  grid-row: 18 / 20;
+}
