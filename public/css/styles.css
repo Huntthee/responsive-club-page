@@ -1,17 +1,26 @@
-.club-title {
-  font-family: 'Permanent Marker', 'Times New Roman', monospace, serif;
+a {
+  font-family: 'Josefin Sans', 'Arial', monospace, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #E0E2DB;
 }
 
-.welcome-text {
+a:hover {
+  color: #fff;
+}
+
+h3 {
   font-family: 'Libre Baskerville', 'Georgia', monospace, serif;
 }
 
-h4, p, a {
+h4, p {
   font-family: 'Josefin Sans', 'Arial', monospace, sans-serif;
 }
 
 body {
   margin: 0;
+  background: #2E3532;
+  text-align: center;
 }
 
 .grid-container {
@@ -32,14 +41,39 @@ body {
   grid-row: 1 / 4;
 }
 
+.club-header .club-title {
+  font-family: 'Permanent Marker', 'Times New Roman', monospace, serif;
+  padding: 15px 15px;
+  background: #000000;
+  color: #ffffff;
+  text-shadow: 2px 2px #8B2635;
+}
+
 .navigation-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navigation-links a {
+  padding: 15px 15px 5px 15px;
+  border: 1px solid #E0E2DB;
+  border-bottom: none;
+  border-radius: 15px 15px 0 0;
+}
+
+.navigation-links a:hover, .navigation-links a:active {
+  color: #000;
+  background: #E0E2DB;
 }
 
 main {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 6;
-  grid-column: 2 / 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1 / 9;
   -ms-grid-row: 4;
   -ms-grid-row-span: 10;
   grid-row: 4 / span 10;
@@ -55,9 +89,34 @@ main {
           flex-direction: column;
 }
 
+.hero-section .action-button {
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 25px;
+  background-color: #8B2635;
+  border: none;
+  color: #E0E2DB;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .hero-image {
   width: 100%;
   height: auto;
+}
+
+.intro-section, .posts-section {
+  background-color: #E0E2DB;
+  padding: 15px 0;
+  margin: 25px 0 25px 0;
+}
+
+.post {
+  background-color: #D2D4C8;
+  padding: 25px;
+  margin: 15px 0 15px 0;
 }
 
 footer {

@@ -1,19 +1,45 @@
+// Colors
+  $darkGreen: #2E3532;
+  $ruby: #8B2635;
+  $alabaster: #E0E2DB;
+  $timberwolf: #D2D4C8;
+
 // Fonts
-.club-title {
+@mixin title {
   font-family: 'Permanent Marker', 'Times New Roman', monospace, serif;
 }
 
-.welcome-text {
+@mixin secondary {
   font-family: 'Libre Baskerville', 'Georgia', monospace, serif;
 }
 
-h4, p, a {
+@mixin base {
   font-family: 'Josefin Sans', 'Arial', monospace, sans-serif;
+}
+
+a {
+  @include base;
+  font-weight: bold;
+  text-decoration: none;
+  color: $alabaster;
+  &:hover {
+    color: #fff;
+  }
+}
+
+h3 {
+  @include secondary;
+}
+
+h4, p {
+  @include base;
 }
 
 // Mobile Layout Styles
 body {
   margin: 0;
+  background: $darkGreen;
+  text-align: center;
 }
 
 .grid-container {
@@ -25,25 +51,69 @@ body {
 .club-header {
   grid-column: 1 / span 8;
   grid-row: 1 / 4;
+  
+  .club-title {
+    @include title;
+    padding: 15px 15px;
+    background: #000000;
+    color: #ffffff;
+    text-shadow: 2px 2px $ruby;
+  }
 }
 
 .navigation-links {
+  display: flex;
   text-align: center;
+  justify-content: space-around;
+  a {
+    padding: 15px 15px 5px 15px;
+    border: 1px solid $alabaster;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    &:hover, &:active {
+      color: #000;
+      background: $alabaster;
+    }
+  }
 }
 
 main {
-  grid-column: 2 / 8;
+  grid-column: 1 / 9;
   grid-row: 4 / span 10;
 }
 
 .hero-section {
   display: flex;
   flex-direction: column;
+  .action-button {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 25px;
+    background-color: $ruby;
+    border: none;
+    color: $alabaster;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 
 .hero-image {
   width: 100%;
   height: auto;
+}
+
+.intro-section, .posts-section {
+  background-color: $alabaster;
+  padding: 15px 0;
+  margin: 25px 0 25px 0;
+}
+
+.post {
+  background-color: $timberwolf;
+  padding: 25px;
+  margin: 15px 0 15px 0;
 }
 
 footer {
